@@ -1,2 +1,4 @@
-# docker-cms
-Docker images for CMS
+# Docker images for CMS
+
+This repository contains various docker images for use by CMS.
+
