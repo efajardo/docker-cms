@@ -20,6 +20,8 @@ LABEL maintainer="Brian Bockelman"
 # ------------------
 # Required software is listed under slc7_amd64_platformSeeds at
 # http://cmsrep.cern.ch/cgi-bin/cmspkg/driver/cms/slc7_amd64_gcc530
+# 
+# - 7 Feb 2018: libaio was added to enable the Oracle client, needed for T0 jobs.
 
 RUN yum -y install cvmfs \
                    gcc \
@@ -33,7 +35,7 @@ RUN yum -y install cvmfs \
                    libXrender libXpm libcom_err perl-Test-Harness perl-Carp perl-constant perl-PathTools \
                    perl-Data-Dumper perl-Digest-MD5 perl-Exporter perl-File-Path perl-File-Temp perl-Getopt-Long \
                    perl-Socket perl-Text-ParseWords perl-Time-Local libX11-devel libXpm-devel libXext-devel mesa-libGLU-devel \
-                   perl-Switch perl-Storable perl-Env perl-Thread-Queue && \
+                   perl-Switch perl-Storable perl-Env perl-Thread-Queue libaio && \
     yum clean all
 
 # Various directories needed for bind mounts (as overlayfs is not available on RHEL6)
