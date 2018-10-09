@@ -1,4 +1,4 @@
-FROM efajardo/tensorflow-gpu
+FROM efajardo/osgvo-tensorflow-gpu
 
 LABEL name="CMS tensorflow-gpu"
 LABEL build-date="20180122"
