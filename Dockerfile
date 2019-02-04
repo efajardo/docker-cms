@@ -26,6 +26,7 @@ RUN yum -y install cvmfs \
                    gcc \
                    glibc-headers \
                    openssh-clients \
+                   openssh-server \
                    redhat-lsb-core \
                    sssd-client && \
     yum -y install glibc coreutils bash tcsh zsh perl tcl tk readline openssl \
