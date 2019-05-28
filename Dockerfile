@@ -4,11 +4,12 @@ LABEL name="CMS tensorflow-gpu"
 LABEL build-date="20190528"
 LABEL maintainer="Edgar Fajardo"
 
+RUN pip3 install -upgrade pip
+
 RUN pip3 install --upgrade \
     scikit-optimize \
-    bayesopt \
-    xgboost 
-
+    xgboost \
+    
 # Required
 # --------
 # 
