@@ -4,15 +4,10 @@ LABEL name="CMS tensorflow-gpu"
 LABEL build-date="20190528"
 LABEL maintainer="Edgar Fajardo"
 
-RUN export DEBIAN_FRONTEND=noninteractive && \
-    apt-get update && apt-get upgrade -y --allow-unauthenticated && \
-
-RUN pip3 --no-cache-dir install \
+RUN pip3 install --upgrade\
     skopt \
     bayesopt \
-    xgboost \
-    && \
-    python3 -m ipykernel.kernelspec
+    xgboost 
 
 # Required
 # --------
