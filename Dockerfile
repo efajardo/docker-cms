@@ -5,7 +5,7 @@ LABEL build-date="20190528"
 LABEL maintainer="Edgar Fajardo"
 
 RUN pip3 install --upgrade\
-    skopt \
+    scikit-optimize \
     bayesopt \
     xgboost 
 
