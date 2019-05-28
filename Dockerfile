@@ -1,8 +1,18 @@
-FROM efajardo/osgvo-tensorflow-gpu
+FROM opensciencegrid/osgvo-tensorflow-gpu
 
 LABEL name="CMS tensorflow-gpu"
-LABEL build-date="20180122"
+LABEL build-date="20190528"
 LABEL maintainer="Edgar Fajardo"
+
+RUN export DEBIAN_FRONTEND=noninteractive && \
+    apt-get update && apt-get upgrade -y --allow-unauthenticated && \
+
+RUN pip3 --no-cache-dir install \
+    skopt \
+    bayesopt \
+    xgboost \
+    && \
+    python3 -m ipykernel.kernelspec
 
 # Required
 # --------
